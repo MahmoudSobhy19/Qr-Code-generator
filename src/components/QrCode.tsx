@@ -37,7 +37,7 @@ const QrCode = () => {
       ) : (
         <form 
           onSubmit={handelSubmit}
-          className='flex gap-6 justify-center items-center bg-slate-200 px-10 py-6 rounded'
+          className='flex flex-col gap-6 justify-center items-center bg-slate-200 px-10 py-6 rounded md:flex-row'
         >
           <p className='text-xl font-bold '>Generate QR Code</p>
 
@@ -45,7 +45,7 @@ const QrCode = () => {
             type="text"
             value={url}
             onChange={handelChange} 
-            className='w-96'
+            className=' w-60 md:w-96'
           />
 
           <Button
@@ -56,6 +56,8 @@ const QrCode = () => {
           </Button>
         </form>
       )}
+
+      <p className=' absolute bottom-8'>Desgined and Developed by Mahmoud Sobhy 🖤</p>
     </div>
   );
 }
